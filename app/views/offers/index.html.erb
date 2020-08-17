@@ -1,8 +1,16 @@
-<h1> Offers </h1>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)">
+  Our offers
+</div>
 
-
-<% @offers.each do |offer| %>
-  <p><%= offer.title %></p>
-  <p><%= offer.description %></p>
-  <p><%= offer.price %></p>
-<% end %>
+<div class="card-product">
+  <% @offers.each do |offer| %>
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= offer.title %></h2>
+      <p><%= offer.description %></p>
+      <p><%= offer.price %></p>
+      <p><%= offer.date %></p>
+      <p><%= offer.category %></p>
+    </div>
+  <% end %>
+</div>

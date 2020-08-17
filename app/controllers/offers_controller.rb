@@ -18,7 +18,7 @@ class OffersController < ApplicationController
 
   private
 
-  def restaurant_params
+  def offer_params
     params.require(:offer).permit(:title, :description, :price, :date, :category)
   end
 end

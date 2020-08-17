@@ -5,7 +5,7 @@ class CreateOffers < ActiveRecord::Migration[6.0]
       t.string :description
       t.integer :price
       t.date :date
-      t.user :references
+      t.references :user
       t.string :category
 
       t.timestamps

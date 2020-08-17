@@ -3,6 +3,10 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
+  def show
+    @offer = Offer.find(params[:id])
+  end
+
   def new
     @offer = Offer.new
   end
@@ -18,7 +22,7 @@ class OffersController < ApplicationController
 
   private
 
-  def restaurant_params
+  def offer_params
     params.require(:offer).permit(:title, :description, :price, :date, :category)
   end
 end

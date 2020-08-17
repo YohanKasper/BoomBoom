@@ -1,0 +1,8 @@
+<h1> Offers </h1>
+
+
+<% @offers.each do |offer| %>
+  <p><%= offer.title %></p>
+  <p><%= offer.description %></p>
+  <p><%= offer.price %></p>
+<% end %>

@@ -1,8 +1,16 @@
-<%= simple_form_for(@offer) do |f| %>
+<h1 class="title ml-4"> Add your offer: </h1>
+
+<div class="container">
+  <%= simple_form_for(@offer) do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :date %>
   <%= f.input :category %>
-  <%= f.submit %>
+  <%= f.submit "Submit offer"%>
 <% end %>
+  <div class="link mt-4">
+    <%= link_to "Back to offers", offers_path %>
+  </div>
+</div>
+

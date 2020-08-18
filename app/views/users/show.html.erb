@@ -1,0 +1,17 @@
+<div class="container" mr-auto>
+    <div class="row">
+    <div class="col-md-3 text-center">
+     <div class="avatar"><%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %></div>
+    </div>
+    <div class="col-md-6">
+      <div class="profile-username">
+        <h1><%= @user.username %></h1>
+      </div>
+
+      <div class="profile-contact-info">
+        <h3>Contact:</h3>
+        <%= @user.email %><br/>
+      </div>
+    </div>
+  </div>
+</div>

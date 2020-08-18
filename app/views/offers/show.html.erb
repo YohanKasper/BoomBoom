@@ -8,12 +8,24 @@
         <p><%= @offer.description %></p>
       </div>
       <h2 class="card-trip-pricing"><%= @offer.price %>€</h2>
+        <p>Available on the: <%= @offer.date %></p>
+        <%= link_to "Edit", edit_offer_path %>
     </div>
   </div>
-</div>
+</div
 
+<!-- Booking Form -->
+<div class="container">
+  <%= simple_form_for [@offer, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit "Submit booking", class: "btn btn-primary" %>
+    <%= link_to "Back to offers", offers_path %>
+  <% end %>
+  
 <div class="actions">
   <%= link_to "Edit", edit_offer_path %>
   <%= link_to "Back to offers", offers_path %>
   <%= link_to "Back to the menu", root_path%>
+
 </div>

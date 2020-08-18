@@ -6,17 +6,17 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container mt-5 mb-5">
   <div class="row offers">
     <% @offers.each do |offer| %>
-      <div class="col-xs-12 col-md-6 col-lg-4">
+      <div class="col-xs-12 col-md-6 col-lg-6">
         <%= link_to offer_path(offer) do %>
-          <div class="card-product">
+          <div class="card-product m-3">
            <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
             <div class="card-product-infos">
               <h2><%= offer.title %></h2>
               <p><%= offer.price %> €</p>
-              <p><%= offer.category %></p>
+              <p><strong><%= offer.category %></strong></p>
             </div>
           </div>
         <% end %>
@@ -31,5 +31,3 @@
     <%= link_to "Back to the menu", root_path%>
   </div>
 </div>
-
-

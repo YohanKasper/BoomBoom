@@ -5,7 +5,8 @@
   <p><%= offer.description %></p>
   <p><%= offer.price %></p>
   <%= link_to "Show", offer_path(offer)%>
-  <%= link_to "Back to the menu", root_path%>
+  <%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_offer_path(offer) %>
 <% end %>
-
+  <%= link_to "Back to the menu", root_path%>
 

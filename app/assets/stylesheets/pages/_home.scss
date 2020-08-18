@@ -116,11 +116,6 @@
   }
 }
 
-.card-category {
-  margin: 20px;
-  padding: 20px;
-}
-
 .logos {
   width: 100px;
   height: 100px;
@@ -131,4 +126,12 @@
 .card {
   background: none;
   border: none;
+  text-align: center;
+}
+
+.titles {
+  text-align: center;
+  font-family: Courier, monospace;
+  font-size: 20px;
+  margin: 20px;
 }

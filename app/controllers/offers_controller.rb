@@ -33,6 +33,11 @@ class OffersController < ApplicationController
     end
   end
 
+  def destroy
+    @offer.destroy
+    redirect_to offers_path, notice: 'Offer was successfully destroyed.'
+  end
+
   private
 
   def set_offer

@@ -10,6 +10,9 @@
       <h2 class="card-trip-pricing"><%= @offer.price %>€</h2>
         <p>Available on the: <%= @offer.date %></p>
         <%= link_to "Edit", edit_offer_path %>
+        <%= link_to offer_path(@offer), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="far fa-trash-alt"></i>
+        <% end  %>
     </div>
   </div>
 </div>

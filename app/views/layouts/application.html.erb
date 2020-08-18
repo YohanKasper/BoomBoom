@@ -48,8 +48,19 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice.present? %>
+      <div class="notice alert alert-success"><%= notice %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end  %>
+    <% if alert.present? %>
+      <div class="alert alert alert-warning"><%= alert %></div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    <% end %>
     <%= yield %>
   </body>
 </html>

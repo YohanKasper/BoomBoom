@@ -1,10 +1,19 @@
 <div class="container">
-<h2><%= @offer.title  %></h2>
-<p><%= @offer.category %></p>
-<p><%= @offer.description %></p>
-<p>Price:  <%= @offer.price %>€</p>
-<p>Available on the:  <%= @offer.date %></p>
+  <h2><%= @offer.title  %></h2>
+  <p><%= @offer.category %></p>
+  <p><%= @offer.description %></p>
+  <p>Price: <%= @offer.price %>€</p>
+  <p>Available on the: <%= @offer.date %></p>
   <%= link_to "Edit", edit_offer_path %>
-  <%= link_to "Back to offers", offers_path %>
 </div>
-  <%= link_to "Back to the menu", root_path%>
+
+<!-- Booking Form -->
+<div class="container">
+  <%= simple_form_for [@offer, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit "Submit booking", class: "btn btn-primary" %>
+    <%= link_to "Back to the menu", root_path %>
+    <%= link_to "Back to offers", offers_path %>
+  <% end %>
+</div>

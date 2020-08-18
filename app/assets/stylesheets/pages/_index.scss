@@ -14,18 +14,18 @@
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 300px;
   object-fit: cover;
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -59,6 +59,8 @@
 
 .container-buttons {
   text-align: center;
+  width: 200px;
+  margin: auto;
 }
 
 // show scss
@@ -102,3 +104,5 @@
   top: -20px;
   width: 40px;
 }
+
+

@@ -8,6 +8,8 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 .card-product img {
@@ -32,4 +34,29 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.offers {
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+}
+
+.buttons {
+  background-color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 1px;
+  padding-left: 1px;
+  opacity: 0.6;
+  box-shadow: 2px 2px 3px grey;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.container-buttons {
+  text-align: center;
 }

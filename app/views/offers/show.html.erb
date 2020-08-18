@@ -1,10 +1,10 @@
 <div class="container">
   <div class="card-trip">
-    <%= cl_image_tag @offer.photo.key, height: 300, width: 300, crop: :fill %>
+    <%= cl_image_tag @offer.photo.key, height: 400, width: 700, crop: :fill %>
     <div class="card-trip-infos">
       <div>
-        <h2> <%= @offer.title %></h2>
-        <p><%= @offer.category %></p>
+        <h1> <%= @offer.title %></h1>
+        <p><strong><%= @offer.category %></strong></p>
         <p><%= @offer.description %></p>
       </div>
       <h2 class="card-trip-pricing"><%= @offer.price %>€</h2>
@@ -22,7 +22,7 @@
   <%= simple_form_for [@offer, @booking] do |f| %>
     <%= f.input :start_date %>
     <%= f.input :end_date %>
-    <%= f.submit "Submit booking", class: "btn btn-primary" %>
+    <%= f.submit "Submit booking", class: "btn btn-primary mr-3" %>
     <%= link_to "Back to offers", offers_path %>
   <% end %>
 </div>

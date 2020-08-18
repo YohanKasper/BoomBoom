@@ -1,8 +1,11 @@
 <h1> Offers </h1>
 
-
 <% @offers.each do |offer| %>
   <p><%= offer.title %></p>
   <p><%= offer.description %></p>
   <p><%= offer.price %></p>
+  <%= link_to "Show", offer_path(offer)%>
+  <%= link_to "Back to the menu", root_path%>
 <% end %>
+
+

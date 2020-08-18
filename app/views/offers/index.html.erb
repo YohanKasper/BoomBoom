@@ -4,7 +4,7 @@
 
 <div class="card-product">
   <% @offers.each do |offer| %>
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
     <div class="card-product-infos">
       <h2><%= offer.title %></h2>
       <p><%= offer.description %></p>

@@ -12,41 +12,7 @@
   </head>
 
   <body>
-    <div class="navbar fixed-top navbar-expand-sm navbar-light navbar-lewagon">
-      <div class="navleft">
-        <%= link_to root_path, class: "navbar-brand" do %>
-          <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQsbWFh72xQmFrp7c2WM8HKPNUbvJ2z4LvJA&usqp=CAU" %>
-        <% end %>
-        <button type="button" class="btn btn-outline-primary pull-left btn-sm">Add an offer</button>
-      </div>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <% if user_signed_in? %>
-            <li class="nav-item active">
-              <%= link_to "Home", root_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Offers", offers_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item dropdown">
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <%= link_to "Profile", "#", class: "dropdown-item" %>
-                <%= link_to "Disconnect", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-              </div>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
+    <%= render 'shared/navbar' %>
 
     <% if notice.present? %>
       <div class="notice alert alert-success"><%= notice %>
@@ -62,18 +28,9 @@
         </button>
     <% end %>
     <%= yield %>
-    <div class="footer">
-      <div class="footer-links">
-        <a href="https://procatinator.com/"><i class="fab fa-github"></i></a>
-        <a href="http://www.clicktoremove.com/"><i class="fab fa-instagram"></i></a>
-        <a href="https://heeeeeeeey.com/"><i class="fab fa-facebook"></i></a>
-        <a href="https://corgiorgy.com/"><i class="fab fa-twitter"></i></a>
-        <a href="http://papertoilet.com/"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <div class="footer-copyright">
-        This footer is made with <i class="fas fa-heart"></i> at BoomBoom
-      </div>
-    </div>
+
+    <%= render 'shared/footer' %>
+
   </body>
 </html>
 

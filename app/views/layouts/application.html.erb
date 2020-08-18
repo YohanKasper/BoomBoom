@@ -13,11 +13,12 @@
 
   <body>
     <div class="navbar fixed-top navbar-expand-sm navbar-light navbar-lewagon">
-      <%= link_to root_path, class: "navbar-brand" do %>
-
-        <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQsbWFh72xQmFrp7c2WM8HKPNUbvJ2z4LvJA&usqp=CAU" %>
-
-      <% end %>
+      <div class="navleft">
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQsbWFh72xQmFrp7c2WM8HKPNUbvJ2z4LvJA&usqp=CAU" %>
+        <% end %>
+        <button type="button" class="btn btn-outline-primary pull-left btn-sm">Add an offer</button>
+      </div>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

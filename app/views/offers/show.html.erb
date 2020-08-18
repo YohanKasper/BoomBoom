@@ -1,11 +1,18 @@
 <div class="container">
-  <h2><%= @offer.title  %></h2>
-  <p><%= @offer.category %></p>
-  <p><%= @offer.description %></p>
-  <p>Price: <%= @offer.price %>€</p>
-  <p>Available on the: <%= @offer.date %></p>
-  <%= link_to "Edit", edit_offer_path %>
-</div>
+  <div class="card-trip">
+    <%= cl_image_tag @offer.photo.key, height: 300, width: 300, crop: :fill %>
+    <div class="card-trip-infos">
+      <div>
+        <h2> <%= @offer.title %></h2>
+        <p><%= @offer.category %></p>
+        <p><%= @offer.description %></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= @offer.price %>€</h2>
+        <p>Available on the: <%= @offer.date %></p>
+        <%= link_to "Edit", edit_offer_path %>
+    </div>
+  </div>
+</div
 
 <!-- Booking Form -->
 <div class="container">
@@ -15,4 +22,10 @@
     <%= f.submit "Submit booking", class: "btn btn-primary" %>
     <%= link_to "Back to offers", offers_path %>
   <% end %>
+  
+<div class="actions">
+  <%= link_to "Edit", edit_offer_path %>
+  <%= link_to "Back to offers", offers_path %>
+  <%= link_to "Back to the menu", root_path%>
+
 </div>

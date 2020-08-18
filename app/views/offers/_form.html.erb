@@ -3,6 +3,7 @@
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :date %>
-  <%= f.input :category %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :category, collection: ['Lights', 'Speakers', 'Food Trucks', 'Drinks', 'Costumes', 'Others'], label: 'Choose your category' %>
   <%= f.submit %>
 <% end %>

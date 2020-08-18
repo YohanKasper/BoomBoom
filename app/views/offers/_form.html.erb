@@ -4,6 +4,6 @@
   <%= f.input :price %>
   <%= f.input :date %>
   <%= f.input :photo, as: :file %>
-  <%= f.input :category, collection: ['Lights', 'Speakers', 'Food Trucks', 'Drinks', 'Costumes', 'Others'], include_blank: false, label: 'Choose your category' %>
+  <%= f.input :category, collection: ['Lights', 'Speakers', 'Food Trucks', 'Drinks', 'Costumes', 'Others'], label: 'Choose your category' %>
   <%= f.submit %>
 <% end %>

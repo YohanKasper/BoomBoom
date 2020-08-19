@@ -8,28 +8,40 @@
   </div>
 </div>
 
-<div class="container mt-5 mb-5">
-  <div class="row offers">
-    <% @offers.each do |offer| %>
-      <div class="col-xs-12 col-md-6 col-lg-6">
-        <%= link_to offer_path(offer) do %>
-          <div class="card-product m-3">
-           <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
-            <div class="card-product-infos">
-              <h2><%= offer.title %></h2>
-              <p class="mr-3"><%= offer.price %> €</p>
-              <p><strong><%= offer.category %></strong></p>
-            </div>
+
+<div class="all d-flex">
+  <div class="left">
+    <div class="container">
+      <div class="row offers">
+        <% @offers.each do |offer| %>
+          <div class="col-xs-12">
+            <%= link_to offer_path(offer) do %>
+              <div class="card-product m-3">
+               <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
+                <div class="card-product-infos">
+                  <h2><%= offer.title %></h2>
+                  <p><%= offer.price %> €</p>
+                  <p><strong><%= offer.category %></strong></p>
+                </div>
+              </div>
+            <% end %>
           </div>
         <% end %>
       </div>
-    <% end %>
+    </div>
+  </div>
+
+  <div class="right">
+    <div id="map"
+         style="width: 100%; height: 625px;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
 </div>
 
 <div class="container-buttons">
+    <%= link_to root_path, class: "navbar-brand" do %>
+    <button type="button" class="btn btn-primary">Back to the menu</button>
+    <% end %>
 
-  <div class="link">
-    <%= link_to "Back to the menu", root_path%>
-  </div>
 </div>

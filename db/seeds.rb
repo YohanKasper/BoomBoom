@@ -10,6 +10,7 @@ User.destroy_all
 Offer.destroy_all
 Booking.destroy_all
 
+
 photo_1 = Dir[File.join(File.dirname(__FILE__), "../app/assets/images/val.jpg")].join
 photo_2 = Dir[File.join(File.dirname(__FILE__), "../app/assets/images/jules.jpeg")].join
 photo_3 = Dir[File.join(File.dirname(__FILE__), "../app/assets/images/yohan.jpg")].join

@@ -3,7 +3,9 @@
   <div class="container">
     <h1>BoomBoom, and your party comes to life.</h1>
     <p>Stop worrying about inviting too much people and just enjoy the moment!</p>
-    <a class="button-white" href="#">Sign in</a>
+    <%= link_to new_user_session_path, class: "navbar-brand" do %>
+    <button type="button" class="btn btn-primary">Login, and let's party</button>
+    <% end %>
   </div>
 </div>
 <br>

@@ -2,7 +2,9 @@
   <div class="container">
     <h1>Our offers</h1>
     <p><span id="banner-typed-text"></span></p>
-    <p> <%= link_to "Add an offer", new_offer_path %></p>
+    <%= link_to new_offer_path, class: "navbar-brand" do %>
+    <button type="button" class="btn btn-primary">Add an offer</button>
+    <% end %>
   </div>
 </div>
 

@@ -1,10 +1,15 @@
+<div class="container mt-5">
+  <h2 class="title pt-5"> Add your offer </h2>
+  <%= render 'form', offer: @offer %>
+  <div class="mt-4">
+    <%= link_to offers_path, class: "navbar-brand" do %>
+    <button type="button" class="btn btn-primary">Back to offers</button>
+    <% end %>
 
-<h1 class="title ml-4"> Add your offer: </h1>
+    <%= link_to root_path, class: "navbar-brand" do %>
+    <button type="button" class="btn btn-outline-primary">Back to the menu</button>
+    <% end %>
+  </div>
+</div>
 
-<div class="container">
-<%= render 'form', offer: @offer %>
-<div class="link mt-4">
-  <%= link_to "Back to offers", offers_path %>
-</div>
-  <%= link_to "Back to the menu", root_path%>
-</div>
+

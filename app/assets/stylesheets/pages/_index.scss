@@ -70,22 +70,22 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 10px;
 }
 
 .card-trip > img {
-  height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
 .card-trip h2 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 18px;
   opacity: .7;
   margin: 0;
 }
@@ -97,6 +97,8 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  font-size: 18px;
+  width: 100%
 }
 
 .card-trip-infos .card-trip-user {
@@ -106,4 +108,10 @@
   width: 40px;
 }
 
+.container {
+  margin-top: 10px;
+}
 
+.infos-text {
+  width: 1000px;
+}

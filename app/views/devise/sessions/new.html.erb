@@ -1,6 +1,7 @@
 <div class="form-container container mt-5">
   <div class="card-form">
     <h2 class="title">Login</h2>
+
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
       <%= f.input :email,

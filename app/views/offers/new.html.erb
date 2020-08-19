@@ -1,15 +1,33 @@
-<div class="container mt-5">
-  <h2 class="title pt-5"> Add your offer </h2>
-  <%= render 'form', offer: @offer %>
-  <div class="mt-4">
-    <%= link_to offers_path, class: "navbar-brand" do %>
-    <button type="button" class="btn btn-primary">Back to offers</button>
-    <% end %>
+<div class="form-container container mt-5">
+  <div class="card-form">
+    <h2 class="title"> Add your offer </h2>
+    <%= render 'form', offer: @offer %>
+    <div class="mt-4">
+      <%= link_to offers_path, class: "navbar-brand" do %>
+      <button type="button" class="btn btn-primary">Back to offers</button>
+      <% end %>
 
-    <%= link_to root_path, class: "navbar-brand" do %>
-    <button type="button" class="btn btn-outline-primary">Back to the menu</button>
-    <% end %>
+      <%= link_to root_path, class: "navbar-brand" do %>
+      <button type="button" class="btn btn-outline-primary">Back to the menu</button>
+      <% end %>
+    </div>
   </div>
 </div>
 
 
+<style>
+  .form-container {
+    padding: 100px 170px;
+  }
+
+  .form-inputs {
+    padding: 0 100px 0 0;
+  }
+
+  .card-form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+</style>

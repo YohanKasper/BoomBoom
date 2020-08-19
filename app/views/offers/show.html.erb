@@ -38,7 +38,7 @@
       <div class="card-form">
         <h5 class="card-header">Book your <%= @offer.title %>!</h5>
         <div class="card-body">
-          <h5 class="card-title">Choose your dates:</h5>
+          <h5 class="card-title">Choose your dates!</h5>
             <%= simple_form_for [@offer, @booking] do |f| %>
               <%= f.input :start_date%>
               <%= f.input :end_date %>

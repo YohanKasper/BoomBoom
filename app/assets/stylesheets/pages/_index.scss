@@ -71,6 +71,8 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 10px;
+  width: 1000px;
+  border-radius: 5px;
 }
 
 .card-trip > img {
@@ -102,7 +104,6 @@
 }
 
 .card-trip-infos .card-trip-user {
-  position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
@@ -115,3 +116,20 @@
 .infos-text {
   width: 1000px;
 }
+
+.card-form {
+  width: 360px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: white;
+  text-align: center;
+  margin-top: 150px;
+  position: sticky;
+  top: 0px;
+  border-radius: 5px;
+}
+
+.link {
+  color:  #FE5F55;
+}
+

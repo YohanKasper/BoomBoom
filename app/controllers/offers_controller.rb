@@ -2,6 +2,17 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
   def index
     @offers = Offer.all
+
+    @offers = Offer.geocoded # returns flats with coordinates
+
+    @markers = @offers.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { offer: offer }),
+        image_url: helpers.asset_url('logo.png')
+      }
+    end
   end
 
   def show

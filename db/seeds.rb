@@ -22,7 +22,8 @@ offer = Offer.create!(
   price: 150,
   date: "2020-08-17",
   category: "Drinks",
-  user: User.all.sample
+  user: User.all.sample,
+  address: "24 rue de Verdun 62000 Dainville"
 )
 offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
@@ -33,7 +34,8 @@ offer = Offer.create!(
   price: 30,
   date: "2020-08-17",
   category: "Costumes",
-  user: User.all.sample
+  user: User.all.sample,
+  address: "52 rue d'Angleterre 59000 Lille"
 )
 offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
@@ -44,7 +46,8 @@ offer = Offer.create!(
   price: 20,
   date: "2020-08-17",
   category: "Lights",
-  user: User.all.sample
+  user: User.all.sample,
+  address: "110 rue Henri Bouchery 59840 Pérenchies"
 )
 offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
@@ -55,7 +58,8 @@ offer = Offer.create!(
   price: 100,
   date: "2020-08-17",
   category: "Drinks",
-  user: User.all.sample
+  user: User.all.sample,
+  address: "1 chemin du beau séjour 59500 Bondues"
 )
 offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
@@ -66,6 +70,7 @@ offer = Offer.create!(
   price: 150,
   date: "2020-08-17",
   category: "Food Trucks",
-  user: User.all.sample
+  user: User.all.sample,
+  address: "25 rue Royale 59000 Lille"
 )
 offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')

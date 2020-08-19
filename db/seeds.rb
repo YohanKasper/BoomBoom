@@ -10,10 +10,26 @@ User.destroy_all
 Offer.destroy_all
 Booking.destroy_all
 
-User.create(email: 'valentin@gmail.com', password: 'mdpmdp', username: 'valentin')
-User.create(email: 'jules@gmail.com', password: 'mdpmdp', username: 'jules')
-User.create(email: 'yohan@gmail.com', password: 'mdpmdp', username: 'yohan')
-User.create(email: 'madeleine@gmail.com', password: 'mdpmdp', username: 'madeleine')
+photo_1 = Dir[File.join(File.dirname(__FILE__), "../app/assets/images/val.jpg")].join
+photo_2 = Dir[File.join(File.dirname(__FILE__), "../app/assets/images/jules.jpeg")].join
+photo_3 = Dir[File.join(File.dirname(__FILE__), "../app/assets/images/yohan.jpg")].join
+photo_4 = Dir[File.join(File.dirname(__FILE__), "../app/assets/images/mad.jpeg")].join
+
+user_1 = User.new(email: 'valentin@gmail.com', password: 'mdpmdp', username: 'valentin')
+user_1.avatar.attach(io: File.open(photo_1), filename: 'nes.png', content_type: 'image/png')
+user_1.save!
+
+user_2 = User.new(email: 'jules@gmail.com', password: 'mdpmdp', username: 'jules')
+user_2.avatar.attach(io: File.open(photo_2), filename: 'nes.png', content_type: 'image/png')
+user_2.save!
+
+user_3 = User.new(email: 'yohan@gmail.com', password: 'mdpmdp', username: 'yohan')
+user_3.avatar.attach(io: File.open(photo_3), filename: 'nes.png', content_type: 'image/png')
+user_3.save!
+
+user_4 = User.new(email: 'madeleine@gmail.com', password: 'mdpmdp', username: 'madeleine')
+user_4.avatar.attach(io: File.open(photo_4), filename: 'nes.png', content_type: 'image/png')
+user_4.save!
 
 file = URI.open("https://images.unsplash.com/photo-1542634093-e0198d4d1e46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80")
 offer = Offer.create!(

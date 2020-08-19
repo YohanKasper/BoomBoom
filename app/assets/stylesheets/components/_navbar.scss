@@ -14,3 +14,8 @@
 .nav-item {
   padding-right: 12px;
 }
+
+.full-height {
+  margin-top: 66px;
+  min-height: calc(100vh - 166px);
+}

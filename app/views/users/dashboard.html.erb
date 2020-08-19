@@ -1,7 +1,12 @@
 <div class="container text-center full-height">
   <div class="row ">
     <div class="col-md-12">
-      <div class="profile-card-2"><img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg" class="img img-responsive">
+      <div class="profile-card-2" style="background-image: url(<%= cl_image_path current_user.avatar.key %>)">
+        <% if current_user.avatar.attached? %>
+          <%#= cl_image_tag current_user.avatar.key %>
+        <% else %>
+          <img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg" class="img img-responsive">
+        <% end %>
         <div class="profile-name"><%= @user.username %></div>
         <div class="profile-username"><%= @user.email %></div>
       </div>

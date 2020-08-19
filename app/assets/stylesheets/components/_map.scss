@@ -11,15 +11,18 @@
   background-repeat: no-repeat;
 }
 
+.all {
+  position: relative;
+}
+
 .left {
   width: 50%;
 }
 
 .right {
   width: 50%;
-  position: relative;
-  padding-right: 15px;
-  padding-top: 15px !important;
+  padding-top: 25px;
+  margin-right: 15px;
   #map {
     width: 100%;
     height: 100%;

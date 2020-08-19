@@ -1,38 +1,55 @@
-<div class="container">
-  <div class="card-trip">
-    <%= cl_image_tag @offer.photo.key, height: 400, width: 700, crop: :fill %>
-    <div class="card-trip-infos">
-      <div class="infos-text">
-        <div class="row d-flex justify-content-between ml-1">
-          <div class="d-flex justify-content-start">
-            <h1 class="mt-10"> <%= @offer.title %></h1>
-            <%= link_to edit_offer_path, method: :get do %>
-              <i class="fas fa-pen ml-3 mt-2" style="font-size: 30px;" ></i>
-            <% end %>
-          </div>
-          <h2><%= @offer.price %>€</h2>
-        </div>
-        <div class="ml-1">
-          <p><strong><%= @offer.category %></strong></p>
-          <span><p class="mt-2"><%= @offer.description %></p></span>
-          <span><p class="mt-2"><strong>Available on the: </strong><%= @offer.date %></p></span>
-          <div class="mt-2">
-            <%= link_to offer_path(@offer), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="far fa-trash-alt" style="font-size: 25px;"></i>
-            <% end  %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="card-trip">
+          <%= cl_image_tag @offer.photo.key, height: 400, width: 700, crop: :fill %>
+          <div class="card-trip-infos">
+            <div class="infos-text">
+              <div class="row d-flex justify-content-between ml-1">
+                <div class="d-flex justify-content-start">
+                  <h1 class="mt-10"> <%= @offer.title %></h1>
+                  <%= link_to edit_offer_path, method: :get do %>
+                    <i class=" link fas fa-pen ml-3 mt-2" style="font-size: 30px;" ></i>
+                  <% end %>
+                </div>
+
+              </div>
+              <div class="ml-1">
+                <p><strong><%= @offer.category %></strong></p>
+                <span><p class="mt-2"><%= @offer.description %></p></span>
+                <span><p class="mt-2"><strong>Available on the: </strong><%= @offer.date %></p></span>
+                <div class="d-flex justify-content-between mt-2">
+                  <%= link_to offer_path(@offer), method: :delete, data: { confirm: "Are you sure?" } do %>
+                        <i class=" link far fa-trash-alt" style="font-size: 25px;"></i>
+                  <% end  %>
+                  <h2><%= @offer.price %>€</h2>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+
+
+  <!-- !-- Booking Form ---->
+
+      <div class="card-form">
+        <h5 class="card-header">Book your <%= @offer.title %>!</h5>
+        <div class="card-body">
+          <h5 class="card-title">Choose your dates!</h5>
+            <%= simple_form_for [@offer, @booking] do |f| %>
+              <%= f.input :start_date%>
+              <%= f.input :end_date %>
+              <%= f.submit "Submit booking", class: "btn btn-primary" %>
+        <% end %>
+        </div>
+      </div>
+
+      <div class="link mt-5 ml-5">
+        <%= link_to "Back to offers", offers_path %>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- !-- Booking Form ---->
- <div class="container">
-  <%= simple_form_for [@offer, @booking] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.submit "Submit booking", class: "btn btn-primary mr-3" %>
-    <%= link_to "Back to offers", offers_path %>
-  <% end %>
-</div>

@@ -1,11 +1,11 @@
-<div class="form-container container mt-5">
-  <div class="card-form">
+<div class="form-container-y container mt-5">
+  <div class="card-form-y">
     <h2 class="title">Sign up</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
-      <div class="form-inputs">
+      <div class="form-inputs-y">
         <%= f.input :username,
                     required: true,
                     autofocus: true,
@@ -30,20 +30,3 @@
     <% end %>
   </div>
 </div>
-
-<style>
-  .form-container {
-    padding: 100px 250px;
-  }
-
-  .form-inputs {
-    padding: 0 100px 0 0;
-  }
-
-  .card-form {
-    background-color: white;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  }
-</style>

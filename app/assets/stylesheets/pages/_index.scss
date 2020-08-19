@@ -1,9 +1,12 @@
 // Import page-specific CSS files here.
 @import "home";
 
+
+
 .card-product {
   overflow: hidden;
   height: 120px;
+  width: 100%;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -41,6 +44,11 @@
   a {
     text-decoration: none;
     color: black;
+  }
+
+  .col-xs-12 {
+    width: 100%;
+    margin-right: 60px;
   }
 
 }

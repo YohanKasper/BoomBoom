@@ -47,6 +47,29 @@
         </div>
       </div>
 
+      <!-----------  EN TRAVAUX ----------->
+
+      <div class="card-yohan">
+
+        <ul class="list-group">
+          <% @offer.reviews.each do |review| %>
+            <li class="list-group-item"><%= review.content %></li>
+          <% end %>
+        </ul>
+
+        <% if @offer.booked?(current_user) %>
+
+          <%= simple_form_for [ @offer.booked?(current_user), Review.new ] do |f| %>
+            <%= f.input :content %>
+            <%= f.submit "Submit review", class: "btn btn-primary" %>
+          <% end %>
+
+        <% end %>
+
+      </div>
+
+     <!-----------  EN TRAVAUX ----------->
+
       <div class="link mt-5 ml-5">
         <%= link_to "Back to offers", offers_path %>
       </div>

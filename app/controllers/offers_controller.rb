@@ -1,5 +1,6 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
+
   def index
     @offers = Offer.all
 
@@ -16,7 +17,6 @@ class OffersController < ApplicationController
   end
 
   def show
-    @offer = Offer.find(params[:id])
     @booking = Booking.new
   end
 
@@ -35,7 +35,6 @@ class OffersController < ApplicationController
   end
 
   def edit
-    # @offer = Offer.find(params[:id])
   end
 
   def update

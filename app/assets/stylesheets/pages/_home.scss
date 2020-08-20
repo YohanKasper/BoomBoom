@@ -166,6 +166,7 @@
 
 #carouselExampleControls {
   height: 400px;
+  width: 1900px;
 }
 
 .carousel-inner {
@@ -191,4 +192,10 @@
 
 .offer-card-1:hover {
   filter: grayscale(100%);
+}
+
+.container-carousel {
+  max-width: 1400px;
+  justify-content: center;
+  margin-left: 20px;
 }

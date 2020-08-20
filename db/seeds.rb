@@ -91,3 +91,87 @@ offer = Offer.create!(
   address: "25 rue Royale 59000 Lille"
 )
 offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+file = URI.open("https://images.unsplash.com/photo-1482433504097-a3cde62f7882?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80")
+offer = Offer.create!(
+  title: "Christmas Costumes",
+  description: "Perfect for your summer party! ;)",
+  price: 35,
+  date: "2020-08-17",
+  category: "Costumes",
+  user: User.all.sample,
+  address: "20 rue de la clef 59000 Lille"
+)
+offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+file = URI.open("https://images.unsplash.com/photo-1491944799262-a5be522e2300?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80")
+offer = Offer.create!(
+  title: "Simple lights",
+  description: "Just stay simple, just stay you.",
+  price: 10,
+  date: "2020-08-17",
+  category: "Lights",
+  user: User.all.sample,
+  address: "51 rue de la monnaie 59000 Lille"
+)
+offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+file = URI.open("https://images.unsplash.com/photo-1591243315780-978fd00ff9db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
+offer = Offer.create!(
+  title: "Lillet Bartender",
+  description: "For the perfect house party!",
+  price: 120,
+  date: "2020-08-17",
+  category: "Drinks",
+  user: User.all.sample,
+  address: "1 rue d'angleterre 59000 Lille"
+)
+offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+file = URI.open("https://images.unsplash.com/photo-1570441262582-a2d4b9a916a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1931&q=80")
+offer = Offer.create!(
+  title: "Crepes",
+  description: "Miam miam les creepes",
+  price: 200,
+  date: "2020-08-17",
+  category: "Food Trucks",
+  user: User.all.sample,
+  address: "100 rue royale 59000 Lille"
+)
+offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+file = URI.open("https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
+offer = Offer.create!(
+  title: "Speaker high quality",
+  description: "The most performant for its price on town!",
+  price: 100,
+  date: "2020-08-17",
+  category: "Speakers",
+  user: User.all.sample,
+  address: "20 rue saint andré 59000 Lille"
+)
+offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+file = URI.open("https://images.unsplash.com/photo-1505845753232-f74a87b62db6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80")
+offer = Offer.create!(
+  title: "Chair Speaker",
+  description: "A revolutionary technology to annimate your parties and conferences",
+  price: 500,
+  date: "2020-08-17",
+  category: "Speakers",
+  user: User.all.sample,
+  address: "10 Boulevard de la liberté 59000 Lille"
+)
+offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+file = URI.open("https://images.unsplash.com/photo-1583513702439-2e611c58e93d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80")
+offer = Offer.create!(
+  title: "Elves Hat",
+  description: "Need a costume for your dog to suit your other christmas costumes?",
+  price: 10,
+  date: "2020-08-17",
+  category: "Costumes",
+  user: User.all.sample,
+  address: "10 boulevard Carnot 59000 Lille"
+)
+offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')

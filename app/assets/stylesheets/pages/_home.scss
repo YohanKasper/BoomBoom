@@ -73,12 +73,28 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.card-category p {
+  margin-bottom: 0;
+}
+
+.card-category a {
+  text-decoration: none;
+}
+
+.card-offer a {
+  text-decoration: none;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin: 20px;
   padding: 20px;
+}
+
+.card-body {
+  padding: 40px;
 }
 
 // Smallest device
@@ -130,8 +146,49 @@
 }
 
 .titles {
-  text-align: center;
-  font-family: Courier, monospace;
-  font-size: 20px;
-  margin: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+// home background color
+
+.colors {
+  background-color: white;
+}
+
+// end home background color
+
+// carroussel
+
+#carouselExampleControls {
+  height: 400px;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+
+  .card-category {
+    height: 100% !important;
+  }
+}
+
+//end carroussel
+
+.get {
+  width: 300px;
+  height: 800px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.offer-card-1:hover {
+  filter: grayscale(100%);
 }

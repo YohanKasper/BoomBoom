@@ -1,9 +1,7 @@
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( https://images.unsplash.com/photo-1566737236500-c8ac43014a67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
   <div class="container">
     <h1>BoomBoom, and your party comes to life.</h1>
     <p>Stop worrying about inviting too much people and just enjoy the moment!</p>
-
     <% if current_user %>
       <%= link_to offers_path, class: "navbar-brand" do %>
       <button type="button" class="btn btn-primary">See our offers</button>
@@ -13,56 +11,126 @@
       <button type="button" class="btn btn-primary">Login, and let's party</button>
       <% end %>
     <% end %>
-
   </div>
 </div>
 <br>
 
+<div class="colors">
+
+  <div class="titles">
+    <p>A bit of who we are...</p>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <img class="logos" src="https://st2.depositphotos.com/1979759/7669/v/950/depositphotos_76699661-stock-illustration-circle-flat-icon-hands-raised.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Friendly</h5>
+          <p class="card-text">Created by young entrepreneurs at Le Wagon, our goal is to facilitate your "back to normal" after such an intense year. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <img class="logos" src="https://icon-library.com/images/106372_bookmark_512x512.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">With love</h5>
+          <p class="card-text">With lots of love we'll help you manage your private events like no other company worldwide.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <img class="logos" src="https://cdn.pixabay.com/photo/2018/12/24/16/53/shop-icon-3893222_1280.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Local</h5>
+          <p class="card-text">Having the best deals with your local shops, you'll find the best prices and most quality services near you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="titles">
-  <p>The services we provide </p>
+  <p>You like them, we rent them.</p>
+</div>
+
+<div class="cards">
+  <div class="card-offer offer-card-1">
+    <%= link_to offers_path do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1505847705282-2c3a20717a69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)">
+          <p>Star Wars Costumes</p>
+          <p>30€</p>
+      </div>
+    <% end %>
+  </div>
+  <div class="card-offer offer-card-1">
+    <%= link_to offers_path do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1502872364588-894d7d6ddfab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)">
+        <p>Diamond Lights</p>
+        <p>20€</p>
+      </div>
+    <% end %>
+  </div>
+  <div class="card-offer offer-card-1">
+    <%= link_to offers_path do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80)">
+        <p>Burgers Food Truck</p>
+        <p>150€</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="titles">
+  <p>Get to know our services... </p>
 </div>
 
 <div class="container pt-1">
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
+
       <div class="carousel-item active">
-        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1568973290903-850cb66e92c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">Lights</div>
+        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1568973290903-850cb66e92c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)"> <h1> <strong>LIGHTS</strong> </h1></div>
       </div>
       <div class="carousel-item">
-        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1563680401337-b77b5e0be9f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80)">Speakers</div>
+        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1563680401337-b77b5e0be9f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80)"><h1> <strong>SPEAKERS</strong> </h1></div>
       </div>
       <div class="carousel-item">
-        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1519861155730-0b5fbf0dd889?ixlib=rb-1.2.1&auto=format&fit=crop&w=1163&q=80)">Food Trucks</div>
+        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1519861155730-0b5fbf0dd889?ixlib=rb-1.2.1&auto=format&fit=crop&w=1163&q=80)"><h1> <strong>FOOD TRUCKS</strong> </h1></div>
       </div>
-       <div class="carousel-item">
-        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1513614825922-8fdb7f6ee617?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2043&q=80)">Drinks</div>
+      <div class="carousel-item">
+        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1513614825922-8fdb7f6ee617?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2043&q=80)"><h1> <strong>DRINKS</strong> </h1></div>
       </div>
 
-       <div class="carousel-item">
-        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1512719724284-dbb9ef47eac5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">Barbecue</div>
+      <div class="carousel-item">
+        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1512719724284-dbb9ef47eac5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)"><h1> <strong>BARBECUE</strong> </h1></div>
       </div>
-       <div class="carousel-item">
-        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1508776894537-6ca1f4d592b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">Costumes</div>
+      <div class="carousel-item">
+        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1508776894537-6ca1f4d592b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)"><h1> <strong>COSTUMES</strong> </h1></div>
       </div>
-       <div class="carousel-item">
-        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1528495612343-9ca9f4a4de28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80)">Other</div>
+      <div class="carousel-item">
+        <div class="card-category" class="d-block w-100" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1528495612343-9ca9f4a4de28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80)"><h1> <strong>OTHER (INSOLITE)</strong> </h1></div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
   </div>
 </div>
-<div class="titles">
-  <p>We will get you</p>
-</div>
 
-  <div class="get">
+
+<div class="titles">
+  <p>Why us? It's simple!</p>
+</div>
+<div class="cards">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1586919302138-33c50cdef1bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
     <p>The best party</p>
   </div>
@@ -71,39 +139,5 @@
   </div>
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1542222024-c39e2281f121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80)">
     <p>The best deals</p>
-  </div>
-</div>
-
-<div class="titles">
-  <p>Why chose us?</p>
-</div>
-
-<div class="row">
-  <div class="col-4">
-    <div class="card">
-      <img class="logos" src="https://image.flaticon.com/icons/png/512/190/190121.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Friendly</h5>
-        <p class="card-text">Created by young entrepreneurs at Le Wagon, our goal is to facilitate your "back to normal" after such an intense year. </p>
-      </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <div class="card">
-      <img class="logos" src="https://icon-library.com/images/106372_bookmark_512x512.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">With love</h5>
-        <p class="card-text">With lots of love we'll help you manage your private events like no other company worldwide.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <div class="card">
-      <img class="logos" src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Shop-512.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Local</h5>
-        <p class="card-text">Having the best deals with your local shops, you'll find the best prices and most quality services near you.</p>
-      </div>
-    </div>
   </div>
 </div>

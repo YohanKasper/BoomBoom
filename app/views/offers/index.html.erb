@@ -9,28 +9,27 @@
 </div>
 
 
-<div class="container mt-5 mb-5">
-  <div class="all d-flex">
-    <div class="left">
-      <div class="container">
-        <div class="row offers">
-          <% @offers.each do |offer| %>
-            <div class="col-xs-12">
-              <%= link_to offer_path(offer) do %>
-                <div class="card-product m-3">
-                 <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
-                  <div class="card-product-infos">
-                    <h2><%= offer.title %></h2>
-                    <p><%= offer.price %> €</p>
-                    <p><strong><%= offer.category %></strong></p>
-                  </div>
+<div class="all d-flex">
+  <div class="left">
+    <div class="container">
+      <div class="row offers">
+        <% @offers.each do |offer| %>
+          <div class="col-xs-12">
+            <%= link_to offer_path(offer) do %>
+              <div class="card-product m-3">
+               <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
+                <div class="card-product-infos">
+                  <h2><%= offer.title %></h2>
+                  <p><%= offer.price %> €</p>
+                  <p><strong><%= offer.category %></strong></p>
                 </div>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
+  </div>
 
     <div class="right">
       <div id="map"

@@ -13,10 +13,19 @@
       <button type="button" class="btn btn-primary">Login, and let's party</button>
       <% end %>
     <% end %>
-
   </div>
 </div>
 <br>
+  <div class="container d-f">
+    <%= form_tag offers_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find an offer"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary container" %>
+    <% end %>
+  </div>
 
 <div class="titles">
   <p>The services we provide </p>

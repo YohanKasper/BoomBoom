@@ -1,9 +1,11 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
   def index
-    @offers = Offer.all
+    @offers = Offer.geocoded
 
-    @offers = Offer.geocoded # returns flats with coordinates
+    if params[:query].present?
+      @offers = @offers.search_by_title_and_description(params[:query])
+    end
 
     @markers = @offers.map do |offer|
       {

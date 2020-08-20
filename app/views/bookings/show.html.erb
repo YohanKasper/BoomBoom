@@ -1,0 +1,19 @@
+<div class="container-booking">
+  <div class="form-container-y">
+    <div class="card-booking mt-5">
+      <div class="card-booking-infos">
+        <h1>Your booking !</h1>
+        <hr  width = "75%" color = black >
+        <h3 class="card-title mt-3">You are booking the: <%= @booking.offer.title %></h3>
+        <hr  width = "75%" color = black >
+        <p> <strong>Start date:</strong> <%= @booking.start_date %></p>
+        <p> <strong>End date:</strong> <%= @booking.end_date %></p>
+        <hr  width = "75%" color = black >
+        <p class="mt-4"><strong>Price:</strong> <%= @booking.offer.price %>€ TTC</p>
+        <%= link_to offers_path, method: :get, data: { confirm: "Well done! Booking confirmed :)"}, class: "navbar-brand" do %>
+           <button type="button" class="btn btn-outline-primary mt-4">Book!</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

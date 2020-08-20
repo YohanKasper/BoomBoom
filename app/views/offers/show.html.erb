@@ -46,33 +46,39 @@
         <% end %>
         </div>
       </div>
+    </div>
 
-      <!-----------  EN TRAVAUX ----------->
-
-      <div class="card-yohan">
-
-        <ul class="list-group">
+      <div class="card-ludo">
+        <div class="card-body  mt-5">
           <% @offer.reviews.each do |review| %>
-            <li class="list-group-item"><%= review.content %></li>
+              <p> <%= review.content %> </p>
+              <div class="d-flex justify-content-between">
+                <p>Posted <%= review.created_at.strftime("%A, %b %d") %></p>
+                <div class="link">
+                  <i class="fas fa-user"></i> <%= review.booking.user.username.capitalize %>
+                </div>
+              </div>
           <% end %>
-        </ul>
+        </div>
+      </div>
 
+
+      <div class="review mt-4">
+      <div class="give-review">
         <% if @offer.booked?(current_user) %>
 
           <%= simple_form_for [ @offer.booked?(current_user), Review.new ] do |f| %>
             <%= f.input :content %>
-            <%= f.submit "Submit review", class: "btn btn-primary" %>
+            <%= f.submit "Submit review", class: "btn btn-outline-primary btn-sm" %>
           <% end %>
-
         <% end %>
-
+      </div>
       </div>
 
-     <!-----------  EN TRAVAUX ----------->
-
-      <div class="link mt-5 ml-5">
-        <%= link_to "Back to offers", offers_path %>
+      <div class="mt-4 container-buttons">
+        <%= link_to offers_path, class: "navbar-brand" do %>
+      <button type="button" class="btn btn-primary">Back to offers</button>
+    <% end %>
       </div>
-    </div>
   </div>
 

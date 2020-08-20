@@ -1,6 +1,4 @@
 class ReviewsController < ApplicationController
-
-
   def new
     @offer = Offer.find(params[:offer_id])
     @review = Review.new

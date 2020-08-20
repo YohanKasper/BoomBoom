@@ -9,7 +9,7 @@
               <div class="row d-flex justify-content-between ml-1">
                 <div class="d-flex justify-content-start">
                   <h1 class="mt-10"> <%= @offer.title %></h1>
-                  <%= link_to edit_offer_path, method: :get do %>
+                  <%= link_to edit_offer_path(@offer), method: :get do %>
                     <i class=" link fas fa-pen ml-3 mt-2" style="font-size: 30px;" ></i>
                   <% end %>
                 </div>
@@ -39,7 +39,7 @@
         <h5 class="card-header">Book your <%= @offer.title %>!</h5>
         <div class="card-body">
           <h5 class="card-title">Choose your dates!</h5>
-            <%= simple_form_for [@offer, @booking] do |f| %>
+            <%= simple_form_for [@offer, Booking.new] do |f| %>
               <%= f.input :start_date%>
               <%= f.input :end_date %>
               <%= f.submit "Submit booking", class: "btn btn-primary" %>
@@ -67,7 +67,7 @@
       <div class="give-review">
         <% if @offer.booked?(current_user) %>
 
-          <%= simple_form_for [ @offer.booked?(current_user), Review.new ] do |f| %>
+          <%= simple_form_for [ @offer.booked?(current_user), @review || Review.new ] do |f| %>
             <%= f.input :content %>
             <%= f.submit "Submit review", class: "btn btn-outline-primary btn-sm" %>
           <% end %>

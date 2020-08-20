@@ -4,12 +4,15 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'users#dashboard'
 
+  resources :search, only: [:index]
+
   resources :offers do
     resources :bookings, only: [:new, :create]
   end
-
+  
   resources :bookings do
     resources :reviews, only: [:create]
   end
 
+  resources :bookings, only: [:show]
 end

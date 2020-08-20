@@ -13,4 +13,11 @@ class Offer < ApplicationRecord
   def booked?(user)
     self.bookings.find_by(user: user)
   end
+
+  include PgSearch::Model
+  pg_search_scope :search_by_title_and_description,
+    against: [:title, :description],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

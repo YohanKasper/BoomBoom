@@ -48,19 +48,19 @@
       </div>
     </div>
 
+    <% @offer.reviews.each do |review| %>
       <div class="card-ludo">
         <div class="card-body  mt-5">
-          <% @offer.reviews.each do |review| %>
-              <p> <%= review.content %> </p>
-              <div class="d-flex justify-content-between">
-                <p>Posted <%= review.created_at.strftime("%A, %b %d") %></p>
-                <div class="link">
-                  <i class="fas fa-user"></i> <%= review.booking.user.username.capitalize %>
-                </div>
-              </div>
-          <% end %>
+          <p> <%= review.content %> </p>
+          <div class="d-flex justify-content-between">
+            <p>Posted <%= review.created_at.strftime("%A, %b %d") %></p>
+            <div class="link">
+              <i class="fas fa-user"></i> <%= review.booking.user.username.capitalize %>
+            </div>
+          </div>
         </div>
       </div>
+    <% end %>
 
 
       <div class="review mt-4">

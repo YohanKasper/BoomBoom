@@ -30,11 +30,13 @@ document.addEventListener('turbolinks:load', () => {
 // External imports
 import "bootstrap";
 import { loadDynamicBannerText } from '../channels/index';
+import { initAutocomplete } from '../plugins/init_autocomplete'
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+  if (document.getElementById('offer_address')) initAutocomplete();
   if (document.querySelector('#banner-typed-text')) loadDynamicBannerText()
 
   // initSelect2();

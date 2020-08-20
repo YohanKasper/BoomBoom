@@ -192,3 +192,22 @@
 .offer-card-1:hover {
   filter: grayscale(100%);
 }
+
+
+
+// SEARCHFORM
+
+#search-form {
+  position: relative;
+  border-radius: 20px;
+
+  .btn-primary {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    margin-top: 0px;
+  }
+}
+
+

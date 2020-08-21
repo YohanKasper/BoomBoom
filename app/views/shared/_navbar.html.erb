@@ -28,6 +28,8 @@
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Profile", dashboard_path, class: "dropdown-item" %>
+            <%= link_to "My booking", dashboard_path, class: "dropdown-item" %>
+            <%= link_to "My offers", dashboard_path, class: "dropdown-item" %>
             <%= link_to "Disconnect", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

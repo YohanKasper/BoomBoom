@@ -10,6 +10,7 @@
           <h6>  <%= booking.offer.title %></h6>
           <p> <strong>Start Date: </strong> <%= booking.start_date %></p>
           <p> <strong>End Date: </strong> <%= booking.end_date %></p>
+          <p> <strong>Price: </strong> <%= booking.offer.price %></p>
         </div>
       </div>
       <% end %>
@@ -43,7 +44,12 @@
             <h6> <%= offer.title %> </h6>
             <p>  <%= offer.description %></p>
             <p> <strong> <%=  offer.category  %></strong> </p>
-            <p> <strong>Price: </strong> <%= offer.price %> €</p>
+            <div class="container-end">
+              <p> <strong>Price: </strong> <%= offer.price %> €</p>
+              <%= link_to offer_path(offer), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class=" link-delete far fa-trash-alt ml-2 mt-1" style="font-size: 15px;"></i>
+               <% end  %>
+            </div>
           </div>
         </div>
         <% end %>

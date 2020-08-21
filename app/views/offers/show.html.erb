@@ -13,8 +13,12 @@
                   <%= link_to edit_offer_path(@offer), method: :get do %>
                     <i class=" link fas fa-pen ml-3 mt-2" style="font-size: 30px;" ></i>
                   <% end %>
-                   <p class="mt-1 ml-3">Average: <%= @average_rating %></p>
-                   <i class="review-rating fas fa-star ml-2 mt-2"></i>
+                    <% if @reviews.count > 0 %>
+                       <p class="mt-1 ml-3">Average: <%= @average_rating %></p>
+                       <i class="review-rating fas fa-star ml-2 mt-2"></i>
+                    <% else %>
+                      <p class="mt-3 ml-3">No review yet!</p>
+                    <% end %>
                 </div>
               </div>
               <div class="ml-1">

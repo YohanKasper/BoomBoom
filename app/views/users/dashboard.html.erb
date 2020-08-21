@@ -1,6 +1,6 @@
 <div class="container d-flex text-align-center full-height">
-  <div class="bookings mr-5">
-    <div class="link mb-4 mt-4">
+  <div class="bookings mr-4">
+    <div class="link mb-4 mt-4 ml-5">
       <h1> Your bookings: <i class="far fa-calendar-check"></i> </h1>
     </div>
       <% current_user.bookings.each do |booking| %>
@@ -29,8 +29,8 @@
     </div>
   </div>
 
-    <div class="offers ml-5">
-      <div class="link mb-4 mt-4">
+    <div class="offers ml-4">
+      <div class="link mb-4 mt-4 ml-5">
         <h1> Your offers: <i class="fas fa-gifts"></i> </h1>
       </div>
         <% current_user.offers.each do |offer| %>

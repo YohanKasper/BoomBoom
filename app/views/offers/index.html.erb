@@ -16,7 +16,9 @@
           <div class="col-xs-12">
             <%= link_to offer_path(offer) do %>
               <div class="card-product m-3">
+                <% if offer.photo.attached? %>
                <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
+               <% end %>
                 <div class="card-product-infos">
                   <h2><%= offer.title %></h2>
                   <p><%= offer.price %> €</p>

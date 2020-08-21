@@ -2,7 +2,9 @@
     <div class="row">
       <div class="col-8">
         <div class="card-trip">
-          <%= cl_image_tag @offer.photo.key, height: 400, width: 700, crop: :fill %>
+          <% if @offer.photo.attached? %>
+            <%= cl_image_tag @offer.photo.key, height: 400, width: 700, crop: :fill %>
+          <% end %>
           <div class="card-trip-infos">
             <div class="infos-text">
               <div class="row d-flex justify-content-between ml-1">

@@ -1,54 +1,15 @@
-header h1 {
-  font-weight:300;
-  font-size:10px;
-  color:#eee;
-  letter-spacing:2px;
-  text-align:center;
-  text-transform:uppercase;
-  margin:0 !important;
-  padding-bottom:25px;
-}
-
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-div,
-input,
-p,
-
-a,
-a:hover,
-a:focus {
-    color: inherit;
-}
-
-body {
-    background-color: #F1F2F3;
-}
 
 .container-fluid,
 .container {
     max-width: 1200px;
 }
 
-.card-container {
-    padding: 100px 0px;
-    -webkit-perspective: 1000;
-    perspective: 1000;
-}
-
 .profile-card-2 {
     height: 500px;
     width: 300px;
-    // max-width: 300px;
-    // max-height: 500px;
     background-position: center;
-    background-color: #FFF;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
@@ -57,12 +18,8 @@ body {
     border-radius: 10px;
 
     img {
-      object-fit: cover;
+      background-size: cover;
     }
-}
-
-.profile-card-2 img {
-    transition: all linear 0.25s;
 }
 
 .profile-card-2 .profile-name {
@@ -73,14 +30,6 @@ body {
     color: #FFF;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     font-weight: bold;
-    transition: all linear 0.25s;
-}
-
-.profile-card-2 .profile-icons {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    color: #FFF;
     transition: all linear 0.25s;
 }
 
@@ -99,12 +48,4 @@ body {
 
 .profile-card-2:hover .profile-name {
     bottom: 80px;
-}
-
-.profile-card-2:hover .profile-username {
-    bottom: 60px;
-}
-
-.profile-card-2:hover .profile-icons {
-    right: 40px;
 }

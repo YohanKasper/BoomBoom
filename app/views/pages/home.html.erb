@@ -14,14 +14,15 @@
   </div>
 </div>
 <br>
-  <div class="container d-f">
+  <div class="container d-f" id="container-research">
     <%= form_tag offers_path, method: :get, id: 'search-form' do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
         placeholder: "Find an offer"
       %>
-      <%= submit_tag "Search", class: "btn btn-primary container" %>
+      <%= submit_tag "", class: "btn btn-primary container" %>
+      <i class="fas fa-search-location"></i>
     <% end %>
   </div>
 

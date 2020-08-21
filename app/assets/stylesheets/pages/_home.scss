@@ -202,15 +202,39 @@
 
 // SEARCHFORM
 
+#container-research {
+  margin-bottom: 35px;
+
+}
+
+.fa-search-location {
+  position: absolute;
+  top: 18px;
+  right: -5px;
+  width: 50px;
+  margin-top: 0px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+
+.form-control {
+  border-radius: 40px;
+  height: 55px;
+}
+
 #search-form {
   position: relative;
-  border-radius: 20px;
+  border-radius: 40px;
 
   .btn-primary {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 100px;
+    top: 9px;
+    right: 10px;
+    width: 50px;
     margin-top: 0px;
+    border-radius: 20px;
+    height: 37px;
   }
 }

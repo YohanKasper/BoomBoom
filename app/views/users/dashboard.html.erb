@@ -1,12 +1,12 @@
-<div class="container d-flex text-align-center full-height">
+<div class="container d-flex full-height">
   <div class="bookings mr-4">
-    <div class="link mb-4 mt-4 ml-5">
-      <h1> Your bookings: <i class="far fa-calendar-check"></i> </h1>
+    <div class="link mb-4 mt-3 ml-5">
+      <h1> Your bookings <i class="far fa-calendar-check"></i> </h1>
     </div>
       <% current_user.bookings.each do |booking| %>
       <div class="card-your-booking mb-3">
         <%= cl_image_tag booking.offer.photo.key, height: 300, width: 300, crop: :fill %>
-        <div class="card-your-booking-infos ml-5">
+        <div class="card-your-booking-infos ml-3">
           <h6>  <%= booking.offer.title %></h6>
           <p> <strong>Start Date: </strong> <%= booking.start_date %></p>
           <p> <strong>End Date: </strong> <%= booking.end_date %></p>
@@ -15,9 +15,12 @@
       <% end %>
     </div>
 
-  <div class="row mt-4">
+  <div class="row mt-1">
     <div class="col-md-12">
-      <div class="profile-card-2" style="background-image: url(<%= cl_image_path current_user.avatar.key %>)">
+      <div class="title-profile mt-4">
+        <h3> <i class="fas fa-heart"></i> </h3>
+      </div>
+      <div class="profile-card-2 mt-4" style="background-image: url(<%= cl_image_path current_user.avatar.key %>)">
         <% if current_user.avatar.attached? %>
           <%#= cl_image_tag current_user.avatar.key %>
         <% else %>
@@ -30,8 +33,8 @@
   </div>
 
     <div class="offers ml-4">
-      <div class="link mb-4 mt-4 ml-5">
-        <h1> Your offers: <i class="fas fa-gifts"></i> </h1>
+      <div class="link mb-4 mt-3 ml-5">
+        <h1> Your offers <i class="fas fa-gifts"></i> </h1>
       </div>
         <% current_user.offers.each do |offer| %>
         <div class="card-your-booking mb-3">

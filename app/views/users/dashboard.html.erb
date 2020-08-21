@@ -5,8 +5,10 @@
     </div>
       <% current_user.bookings.each do |booking| %>
       <div class="card-your-booking mb-3">
-        <%= cl_image_tag booking.offer.photo.key, height: 300, width: 300, crop: :fill %>
-        <div class="card-your-booking-infos ml-3">
+        <% if booking.offer.photo.attached? %>
+          <%= cl_image_tag booking.offer.photo.key, height: 300, width: 300, crop: :fill %>
+        <% end %>
+       <div class="card-your-booking-infos ml-3">
           <h6 class="mt-2">  <%= booking.offer.title %></h6>
           <p> <strong>Start Date: </strong> <%= booking.start_date %></p>
           <p> <strong>End Date: </strong> <%= booking.end_date %></p>
@@ -48,7 +50,9 @@
       </div>
         <% current_user.offers.each do |offer| %>
         <div class="card-your-booking mb-3">
-          <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
+          <% if offer.photo.attached? %>
+            <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
+          <% end %>
           <div class="card-your-booking-infos ml-3">
             <h6> <%= offer.title %> </h6>
             <p>  <%= offer.description %></p>

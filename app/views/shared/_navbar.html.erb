@@ -3,8 +3,12 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQsbWFh72xQmFrp7c2WM8HKPNUbvJ2z4LvJA&usqp=CAU" %>
     <% end %>
+     <% if current_user %>
     <%= link_to new_offer_path, class: "navbar-brand" do %>
     <button type="button" class="btn btn-outline-primary btn-sm"></i>Add an offer</button>
+    <% end %>
+    <% else %>
+
     <% end %>
   </div>
 

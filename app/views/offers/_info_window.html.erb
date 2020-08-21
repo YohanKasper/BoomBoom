@@ -1,5 +1,7 @@
 <div class="loca">
   <h2> <%= offer.title %></h2>
   <p> <%= offer.address %></p>
+  <% if offer.photo.attached? %>
   <%= cl_image_tag offer.photo.key, height: 150, width: 150, crop: :fill %>
+  <% end %>
 </div>

@@ -12,6 +12,8 @@
                   <%= link_to edit_offer_path(@offer), method: :get do %>
                     <i class=" link fas fa-pen ml-3 mt-2" style="font-size: 30px;" ></i>
                   <% end %>
+                   <p class="mt-1 ml-3">Average: <%= @average_rating %></p>
+                   <i class="review-rating fas fa-star ml-2 mt-2"></i>
                 </div>
 
               </div>
@@ -48,27 +50,44 @@
       </div>
     </div>
 
-    <% @offer.reviews.each do |review| %>
-      <div class="card-ludo">
-        <div class="card-body  mt-5">
-          <p> <%= review.content %> </p>
-          <div class="d-flex justify-content-between">
-            <p>Posted <%= review.created_at.strftime("%A, %b %d") %></p>
-            <div class="link">
-              <i class="fas fa-user"></i> <%= review.booking.user.username.capitalize %>
-            </div>
+<!--   <div class="d-flex justify-content-center">
+ -->    <div class="row d-flex">
+      <% @offer.reviews.each do |review| %>
+      <div class="col-4">
+        <div class="card-review mt-5">
+          <div class="card-test">
+            <% review.rating.times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+            <% (5 - review.rating).times do %>
+              <i class="far fa-star"></i>
+            <% end %>
+            <p class="pt-1"> <%= review.content %> </p>
+            <div class="d-flex justify-content-between">
+             <p class="opacity-date">Posted <%= review.created_at.strftime("%A, %b %d") %></p>
+              <div class="link">
+               <i class="fas fa-user"></i> <%= review.booking.user.username.capitalize %>
+              </div>
+           </div>
           </div>
         </div>
       </div>
-    <% end %>
-
-
+       <% end %>
+    </div>
+<!--   </div>
+ -->
       <div class="review mt-4">
       <div class="give-review">
         <% if @offer.booked?(current_user) %>
-
           <%= simple_form_for [ @offer.booked?(current_user), @review || Review.new ] do |f| %>
+            <p class="link mt-5"><strong>Give us your feedback</strong></p>
+            <div class="mb-2">
+              <% 5.times do |index| %>
+                <i id="<%= index + 1 %>" class="review-rating far fa-star"></i>
+              <% end %>
+            </div>
             <%= f.input :content %>
+            <%= f.input :rating, as: :hidden  %>
             <%= f.submit "Submit review", class: "btn btn-outline-primary btn-sm" %>
           <% end %>
         <% end %>

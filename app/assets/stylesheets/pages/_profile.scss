@@ -108,3 +108,37 @@ body {
 .profile-card-2:hover .profile-icons {
     right: 40px;
 }
+
+
+.card-your-booking {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+
+.card-your-booking img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-your-booking h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-your-booking p {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-your-booking .card-your-booking-infos {
+  padding: 16px;
+}

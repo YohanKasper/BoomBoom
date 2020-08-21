@@ -35,7 +35,7 @@ user_4.save!
 file = URI.open("https://images.unsplash.com/photo-1542634093-e0198d4d1e46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80")
 offer = Offer.create!(
   title: "Beer Spinner",
-  description: "The perfect beer spinner for a night out. It can contain 30L of beer and 10 different beers are available for you to rent!",
+  description: "The perfect beer spinner for a night out.",
   price: 150,
   date: "2020-08-17",
   category: "Drinks",
@@ -83,7 +83,7 @@ offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 file = URI.open("https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80")
 offer = Offer.create!(
   title: "Burgers Food Truck",
-  description: "The most delicious burgers of your region to make your friends and family's belly happy",
+  description: "The most delicious burgers of your region",
   price: 150,
   date: "2020-08-17",
   category: "Food Trucks",
@@ -155,7 +155,7 @@ offer.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 file = URI.open("https://images.unsplash.com/photo-1505845753232-f74a87b62db6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80")
 offer = Offer.create!(
   title: "Chair Speaker",
-  description: "A revolutionary technology to annimate your parties and conferences",
+  description: "A revolutionary technology to annimate your parties",
   price: 500,
   date: "2020-08-17",
   category: "Speakers",

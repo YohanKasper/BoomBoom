@@ -4,7 +4,7 @@
   <%= f.input :price %>
   <%= f.input :date %>
   <%= f.input :address %>
-  <%= f.input :photo, input_html: {class: "d-none"}, label_html: {class: "btn btn-outline-primary btn-sm ml-2 mt-2"}, label: "Add your profile picture" %>
+  <%= f.input :photo, input_html: {class: "d-none"}, label_html: {class: "btn btn-outline-primary btn-sm ml-2 mt-2"}, label: "Add your offer picture" %>
   <%= f.input :category, collection: ['Lights', 'Speakers', 'Food Trucks', 'Drinks', 'Costumes', 'Others'], label: 'Choose your category' %>
   <%= f.button :submit, 'Create offer', class: 'btn btn-outline-primary btn-sm ml-2 mt-2' %>
 <% end %>

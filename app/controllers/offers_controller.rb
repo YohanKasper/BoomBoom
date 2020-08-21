@@ -20,6 +20,8 @@ class OffersController < ApplicationController
 
   def show
     @booking = Booking.new
+    @reviews = @offer.reviews
+    @average_rating = @reviews.average(:rating)
   end
 
   def new
